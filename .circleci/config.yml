@@ -2,7 +2,7 @@ version: 2
 jobs:
   gen_cert:
     docker:
-      - image: puiterwijk/qemu-ovmf-secureboot:testenv
+      - image: philmd/qemu-ovmf-secureboot:test
 
     steps:
       - checkout
@@ -20,7 +20,7 @@ jobs:
 
   test:
     docker:
-      - image: puiterwijk/qemu-ovmf-secureboot:testenv
+      - image: philmd/qemu-ovmf-secureboot:test
 
     steps:
       - checkout
